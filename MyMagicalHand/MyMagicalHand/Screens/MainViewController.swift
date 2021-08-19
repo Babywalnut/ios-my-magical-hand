@@ -6,22 +6,22 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     
-    let tempImageView = UIImageView()
-    let canvasView = UIView()
-    let shapeLabel = ResultLabel()
-    let probabilityLabel = ResultLabel()
-    let estimateButton = UIButton()
-    let resetButton = UIButton()
-    let mainStackView = MainStackView()
-    let buttonStackView = ButtonStackView()
+    private let tempImageView = UIImageView()
+    private let canvasView = UIView()
+    private let shapeLabel = ResultLabel()
+    private let probabilityLabel = ResultLabel()
+    private let estimateButton = UIButton()
+    private let resetButton = UIButton()
+    private let mainStackView = MainStackView()
+    private let buttonStackView = ButtonStackView()
     
-    var lastPoint = CGPoint.zero
-    var color = UIColor.black
-    var brushWidth: CGFloat = 10.0
-    var opacity: CGFloat = 1.0
-    var swiped = false
+    private var lastPoint = CGPoint.zero
+    private var Inkcolor = UIColor.black
+    private var brushWidth: CGFloat = 10.0
+    private var opacity: CGFloat = 1.0
+    private var swiped = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,11 +58,10 @@ class MainViewController: UIViewController {
       
       context.move(to: fromPoint)
       context.addLine(to: toPoint)
-      
       context.setLineCap(.round)
       context.setBlendMode(.normal)
       context.setLineWidth(brushWidth)
-      context.setStrokeColor(color.cgColor)
+      context.setStrokeColor(Inkcolor.cgColor)
       
       context.strokePath()
       
