@@ -8,8 +8,7 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
-    private let tempImageView = UIImageView()
-    private let canvasView = UIView()
+    private let canvasView = UIImageView()
     private let shapeLabel = ResultLabel()
     private let probabilityLabel = ResultLabel()
     private let estimateButton = UIButton()
@@ -18,7 +17,7 @@ final class MainViewController: UIViewController {
     private let buttonStackView = ButtonStackView()
     
     private var lastPoint = CGPoint.zero
-    private var Inkcolor = UIColor.black
+    private var inkColor = UIColor.black
     private var brushWidth: CGFloat = 10.0
     private var opacity: CGFloat = 1.0
     private var swiped = false
@@ -28,7 +27,6 @@ final class MainViewController: UIViewController {
         view.backgroundColor = UIColor.systemGray
         configureEstimateButton()
         configureResetButton()
-        configureTempImageView()
         configureCanvasView()
         configureButtonStackView()
         configureResultLabel()
@@ -54,19 +52,19 @@ final class MainViewController: UIViewController {
         return
       }
         
-      tempImageView.image?.draw(in: canvasView.bounds)
+      canvasView.image?.draw(in: canvasView.bounds)
       
       context.move(to: fromPoint)
       context.addLine(to: toPoint)
       context.setLineCap(.round)
       context.setBlendMode(.normal)
       context.setLineWidth(brushWidth)
-      context.setStrokeColor(Inkcolor.cgColor)
+      context.setStrokeColor(inkColor.cgColor)
       
       context.strokePath()
       
-      tempImageView.image = UIGraphicsGetImageFromCurrentImageContext()
-      tempImageView.alpha = opacity
+      canvasView.image = UIGraphicsGetImageFromCurrentImageContext()
+      canvasView.alpha = opacity
       UIGraphicsEndImageContext()
     }
     
@@ -86,9 +84,9 @@ final class MainViewController: UIViewController {
         drawLine(from: lastPoint, to: lastPoint)
       }
       
-      UIGraphicsBeginImageContext(tempImageView.frame.size)
-      tempImageView.image?.draw(in: canvasView.bounds, blendMode: .normal, alpha:opacity)
-      tempImageView.image = UIGraphicsGetImageFromCurrentImageContext()
+      UIGraphicsBeginImageContext(canvasView.frame.size)
+      canvasView.image?.draw(in: canvasView.bounds, blendMode: .normal, alpha:opacity)
+      canvasView.image = UIGraphicsGetImageFromCurrentImageContext()
       UIGraphicsEndImageContext()
     }
     
@@ -98,25 +96,12 @@ final class MainViewController: UIViewController {
     }
     
     @objc func resetPressed() {
-        tempImageView.image = nil
+        canvasView.image = nil
         shapeLabel.text = nil
         probabilityLabel.text = nil
     }
     
     /// UI Layout Configure Methods
-    func configureTempImageView() {
-        canvasView.addSubview(tempImageView)
-        tempImageView.backgroundColor = UIColor.white
-        tempImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            tempImageView.topAnchor.constraint(equalTo: canvasView.safeAreaLayoutGuide.topAnchor),
-            tempImageView.bottomAnchor.constraint(equalTo: canvasView.safeAreaLayoutGuide.bottomAnchor),
-            tempImageView.leadingAnchor.constraint(equalTo: canvasView.safeAreaLayoutGuide.leadingAnchor),
-            tempImageView.trailingAnchor.constraint(equalTo: canvasView.safeAreaLayoutGuide.trailingAnchor)
-        ])
-    }
-    
     func configureEstimateButton() {
         buttonStackView.addArrangedSubview(estimateButton)
         estimateButton.setTitle("결과보기", for: .normal)
@@ -133,6 +118,7 @@ final class MainViewController: UIViewController {
     
     func configureCanvasView() {
         mainStackView.addArrangedSubview(canvasView)
+        canvasView.backgroundColor = UIColor.white
     }
     
     func configureButtonStackView() {
