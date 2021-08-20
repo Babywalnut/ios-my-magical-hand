@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		44C2240F3B5880D8BE8B7D5A /* Pods_MyMagicalHand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AB92A5361AE3F8342CAFF1 /* Pods_MyMagicalHand.framework */; };
-		B436C5FF26CB98390029F7A9 /* ResultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B436C5FE26CB98390029F7A9 /* ResultLabel.swift */; };
+		B401D44126CE1148004577D3 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B401D44026CE1148004577D3 /* CanvasView.swift */; };
 		B436C60A26CB9B230029F7A9 /* CreateMLClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B436C60926CB9B230029F7A9 /* CreateMLClassifier.mlmodel */; };
-		B49AA47226CA6A7700D9AEEA /* MainStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49AA47126CA6A7700D9AEEA /* MainStackView.swift */; };
-		B49AA47826CA749A00D9AEEA /* ButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49AA47726CA749A00D9AEEA /* ButtonStackView.swift */; };
 		B4B8864026C1601400E33C40 /* KerasClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B4B8863F26C1601400E33C40 /* KerasClassifier.mlmodel */; };
 		C7927576262C81C900EF5D3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7927575262C81C900EF5D3A /* AppDelegate.swift */; };
 		C7927578262C81C900EF5D3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7927577262C81C900EF5D3A /* SceneDelegate.swift */; };
@@ -22,10 +20,8 @@
 
 /* Begin PBXFileReference section */
 		06714E919283968561B9A742 /* Pods-MyMagicalHand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMagicalHand.debug.xcconfig"; path = "Target Support Files/Pods-MyMagicalHand/Pods-MyMagicalHand.debug.xcconfig"; sourceTree = "<group>"; };
-		B436C5FE26CB98390029F7A9 /* ResultLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLabel.swift; sourceTree = "<group>"; };
+		B401D44026CE1148004577D3 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		B436C60926CB9B230029F7A9 /* CreateMLClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CreateMLClassifier.mlmodel; path = ../../../../../../Documents/CreateMLClassifier.mlmodel; sourceTree = "<group>"; };
-		B49AA47126CA6A7700D9AEEA /* MainStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStackView.swift; sourceTree = "<group>"; };
-		B49AA47726CA749A00D9AEEA /* ButtonStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStackView.swift; sourceTree = "<group>"; };
 		B4B8863F26C1601400E33C40 /* KerasClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = KerasClassifier.mlmodel; path = ../../../../../../Downloads/KerasClassifier.mlmodel; sourceTree = "<group>"; };
 		C506D3D90BEACA46E8DF195F /* Pods-MyMagicalHand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMagicalHand.release.xcconfig"; path = "Target Support Files/Pods-MyMagicalHand/Pods-MyMagicalHand.release.xcconfig"; sourceTree = "<group>"; };
 		C7927572262C81C900EF5D3A /* MyMagicalHand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMagicalHand.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,9 +74,7 @@
 		B436C5F926CB8EC50029F7A9 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				B49AA47126CA6A7700D9AEEA /* MainStackView.swift */,
-				B49AA47726CA749A00D9AEEA /* ButtonStackView.swift */,
-				B436C5FE26CB98390029F7A9 /* ResultLabel.swift */,
+				B401D44026CE1148004577D3 /* CanvasView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -233,13 +227,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4B8864026C1601400E33C40 /* KerasClassifier.mlmodel in Sources */,
-				B49AA47226CA6A7700D9AEEA /* MainStackView.swift in Sources */,
-				B436C5FF26CB98390029F7A9 /* ResultLabel.swift in Sources */,
 				C792757A262C81C900EF5D3A /* MainViewController.swift in Sources */,
 				C7927576262C81C900EF5D3A /* AppDelegate.swift in Sources */,
 				B436C60A26CB9B230029F7A9 /* CreateMLClassifier.mlmodel in Sources */,
 				C7927578262C81C900EF5D3A /* SceneDelegate.swift in Sources */,
-				B49AA47826CA749A00D9AEEA /* ButtonStackView.swift in Sources */,
+				B401D44126CE1148004577D3 /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
