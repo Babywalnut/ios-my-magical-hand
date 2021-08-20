@@ -110,14 +110,12 @@ final class MainViewController: UIViewController {
     }
     
     private func configureShapeLabel() {
-
         NSLayoutConstraint.activate([
             shapeLabel.heightAnchor.constraint(equalToConstant: view.frame.height / 20)
         ])
     }
     
     private func configureProbabilityLabel() {
-
         NSLayoutConstraint.activate([
             probabilityLabel.heightAnchor.constraint(equalToConstant: view.frame.height / 20)
         ])
