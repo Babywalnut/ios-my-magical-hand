@@ -26,7 +26,6 @@ final class CanvasView: UIImageView {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else {
-            print("fuck")
             return
         }
         
